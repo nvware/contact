@@ -1,23 +1,28 @@
 package com.example.demo.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-//import org.springframework.data.annotation.Id;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.validation.constraints.NotBlank;
+import javax.persistence.Id;
 
 @Entity
+//@Table(name = "contact")
 public class Contact {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    //    @Column(name = "name")
+    private @NotBlank String name;
+    private @NotBlank String phone;
 
-    private String name;
+    public Contact() {
+    }
 
-    public Contact() {}
-
-    public Contact(String name) {
+    public Contact(String name, String phone) {
         this.name = name;
+        this.phone = phone;
     }
 
     public Long getId() {
@@ -35,4 +40,14 @@ public class Contact {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+
 }

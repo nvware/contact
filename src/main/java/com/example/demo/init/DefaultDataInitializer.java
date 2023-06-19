@@ -5,7 +5,7 @@ package com.example.demo.init;
  * Modified by <a href="mailto:nvware">Hamid Valizadegan</a>
  */
 
-import com.example.demo.dao.ContactRepository;
+import com.example.demo.repository.ContactRepository;
 import com.example.demo.entity.Contact;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -27,16 +27,16 @@ public class DefaultDataInitializer implements CommandLineRunner {
     @Override
     public void run(String... args) {
         List<Contact> defaultContacts = Arrays.asList(
-                new Contact("John Doe"),
-                new Contact("Jane Smith"),
-                new Contact("Michael Johnson"),
-                new Contact("Emily Davis"),
-                new Contact("Robert Wilson"),
-                new Contact("Samantha Thompson"),
-                new Contact("David Anderson"),
-                new Contact("Olivia Lee"),
-                new Contact("Ethan Martinez"),
-                new Contact("Sophia Taylor")
+                new Contact("John Doe", "1234567890"),
+                new Contact("Jane Smith", "9876543210"),
+                new Contact("Michael Johnson", "4567890123"),
+                new Contact("Emily Davis", "0123456789"),
+                new Contact("David Wilson", "5678901234"),
+                new Contact("Sarah Anderson", "8901234567"),
+                new Contact("Christopher Lee", "2345678901"),
+                new Contact("Jennifer Thomas", "7890123456"),
+                new Contact("Matthew Martinez", "3456789012"),
+                new Contact("Olivia Brown", "9012345678")
         );
 
         contactRepository.saveAll(defaultContacts);

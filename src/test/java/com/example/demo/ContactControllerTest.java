@@ -1,6 +1,6 @@
 package com.example.demo;
 
-import com.example.demo.dao.ContactRepository;
+import com.example.demo.repository.ContactRepository;
 import com.example.demo.entity.Contact;
 import org.junit.jupiter.api.Test;
 
@@ -28,7 +28,7 @@ public class ContactControllerTest {
     @Test
     public void testCRUDOperations() {
         // create a new contact
-        Contact contact = new Contact("John Smith");
+        Contact contact = new Contact("Jane Smith", "9876543210");
         ResponseEntity<Contact> response = restTemplate.postForEntity("/contacts", contact, Contact.class);
         assertEquals(HttpStatus.CREATED, response.getStatusCode());
 
