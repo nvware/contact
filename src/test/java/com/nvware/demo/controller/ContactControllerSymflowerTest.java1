@@ -1,0 +1,32 @@
+package com.example.demo.controller;
+
+import service.com.nvware.demo.ContactService;
+import org.junit.jupiter.api.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.web.servlet.MockMvc;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+@WebMvcTest(ContactController.class)
+public class ContactControllerSymflowerTest {
+	@Autowired
+	private MockMvc mockMvc;
+
+	@MockBean
+	private ContactService contactService;
+
+
+	@Test
+	public void getContactByPhone1() throws Exception {
+		String phoneNumber = "9876543210";
+
+//		this.mockMvc.perform(get("/api/v1.0/contacts/phone/{phone}", phoneNumber))
+//				.andExpect(status().isOk())
+//				.andExpect(content().contentType("application/json"))
+//				.andExpect(jsonPath("$.name").value("Jane Smith"));
+	}
+}

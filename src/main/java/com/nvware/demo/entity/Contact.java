@@ -1,11 +1,11 @@
-package com.example.demo.entity;
+package com.nvware.demo.entity;
 
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.validation.constraints.NotBlank;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 //@Table(name = "contact")

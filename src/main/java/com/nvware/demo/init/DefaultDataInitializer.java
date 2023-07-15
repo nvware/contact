@@ -1,12 +1,12 @@
-package com.example.demo.init;
+package com.nvware.demo.init;
 
 /**
  * @author <a href="mailto:nvware">Hamid Valizadegan</a>
  * Modified by <a href="mailto:nvware">Hamid Valizadegan</a>
  */
 
-import com.example.demo.repository.ContactRepository;
-import com.example.demo.entity.Contact;
+import com.nvware.demo.entity.Contact;
+import com.nvware.demo.repository.ContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

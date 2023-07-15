@@ -1,7 +1,7 @@
-package com.example.demo.service;
+package com.nvware.demo.service;
 
-import com.example.demo.entity.Contact;
-import com.example.demo.repository.ContactRepository;
+import com.nvware.demo.entity.Contact;
+import com.nvware.demo.repository.ContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

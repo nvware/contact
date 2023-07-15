@@ -1,0 +1,52 @@
+### getAllContacts
+GET http://localhost:8181/api/v1.0/contacts
+
+<> contacts-4.csv
+<> contacts-3.csv
+<> contacts-2.csv
+<> contacts-1.csv
+### getContactById
+GET http://localhost:8181/api/v1.0/contacts/11
+
+<> 2023-07-06T103938.200.json
+<> 2023-07-06T103909.200.json
+<> 2023-07-06T103631.200.json
+<> 2023-07-06T103624.200.json
+<> 2023-07-06T103620.200.json
+
+### createContact
+POST http://localhost:8181/api/v1.0/contacts
+Content-Type: application/json
+
+{
+  "id": 11,
+  "name": "Jane Smith",
+  "phone": "9876543210"
+}
+
+<> 2023-07-06T103904.201.json
+<> 2023-07-06T103518.201.json
+<> 2023-07-06T103331.400.html
+### updateContact
+PUT http://localhost:8181/api/v1.0/contacts/11
+Content-Type: application/json
+
+{
+  "name": "Jane Smith1",
+  "phone": "9876543210"
+}
+
+<> 2023-07-06T103931.200.json
+
+### deleteContact
+DELETE http://localhost:8181/api/v1.0/contacts/11
+### getContactById
+GET http://localhost:8181/api/v1.0/contacts/10
+
+<> 2023-07-06T104104.200.json
+### getContactByPhone
+GET http://localhost:8181/api/v1.0/contacts/phone/9012345678
+
+<> 2023-07-06T104121.200.json
+
+

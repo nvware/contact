@@ -1,0 +1,45 @@
+
+https://www.jetbrains.com/help/idea/exploring-http-syntax.html#response-handling
+
+Rest requests
+
+*************************************************************
+createContact:
+
+    http://localhost:8080/api/v1.0/contacts
+        body : {"name": "name2 f2"}
+        Content-Type: application/json
+        Method: Post
+*************************************************************
+updateContact:
+
+     http://localhost:8080/api/v1.0/contacts/1
+        body : {"name": "Hamid Valizadegan"}
+        Content-Type: application/json
+        Method: Put
+*************************************************************
+deleteContact:
+         http://localhost:8080/api/v1.0/contacts/1  body : {"name": "Hamid Valizadegan"} Method: Delete
+
+*************************************************************
+getContactById:
+
+     http://localhost:8080/api/v1.0/contacts/1
+        Content-Type: application/json
+        Method: Get
+
+*************************************************************
+getAllContacts:
+
+        http://localhost:8080/api/v1.0/contacts
+        Content-Type: text/csv
+        Method: Get
+        Body: id,name
+                1,name1 f1
+                2,name2 f2
+
+*************************************************************
+getContactByPhone
+     http://localhost:8080/api/v1.0/contacts/9876543210
+        Content-Type: application/json
+        Method: Get
